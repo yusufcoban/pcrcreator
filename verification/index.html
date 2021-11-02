@@ -1,0 +1,496 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Result Verification</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./assets/images/icoEcoCare1.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
+    <style>
+        html {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        body,
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+            font-weight: 300;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.6d07511f82aec3aaaf09.css" media="all" onload="this.media='all'"><noscript>
+        <link rel="stylesheet" href="styles.6d07511f82aec3aaaf09.css">
+    </noscript>
+    <style></style>
+    <style>
+        nav[_ngcontent-dmw-c6] {
+            width: 100%;
+            height: 68px;
+            background-color: #fff;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 16px 32px
+        }
+
+        .language-holder[_ngcontent-dmw-c6],
+        nav[_ngcontent-dmw-c6] {
+            display: flex;
+            align-items: center
+        }
+
+        .language-holder[_ngcontent-dmw-c6] {
+            justify-content: flex-start
+        }
+
+        .sub-container[_ngcontent-dmw-c6] {
+            flex: 1
+        }
+
+        .sub-flags[_ngcontent-dmw-c6] {
+            justify-content: flex-start;
+            cursor: pointer
+        }
+
+        .logo[_ngcontent-dmw-c6],
+        .sub-flags[_ngcontent-dmw-c6] {
+            display: flex;
+            align-items: center
+        }
+
+        .logo[_ngcontent-dmw-c6] {
+            justify-content: center
+        }
+
+        .clearfix[_ngcontent-dmw-c6] {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center
+        }
+
+        .language-menu-holder[_ngcontent-dmw-c6] {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 68px;
+            padding: 16px;
+            box-sizing: border-box;
+            background-color: #fff;
+            z-index: 10000;
+            box-shadow: 0 6px 12px #0003
+        }
+
+        .language-selector[_ngcontent-dmw-c6] {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+            box-sizing: border-box
+        }
+
+        .language-name[_ngcontent-dmw-c6] {
+            padding-left: 16px;
+            font-weight: 700;
+            font-size: 18px;
+            color: #444
+        }
+
+        .language-selector[_ngcontent-dmw-c6]:last-child {
+            margin-bottom: 0
+        }
+
+        @media (min-width: 900px) {
+            nav[_ngcontent-dmw-c6] {
+                height: 78px
+            }
+
+            .logo[_ngcontent-dmw-c6] {
+                flex: 0
+            }
+        }
+    </style>
+    <style>
+        .footer-container[_ngcontent-dmw-c7] {
+            justify-content: space-between;
+            background: #333;
+            color: #fff;
+            padding: 16px 32px;
+            position: relative;
+            bottom: 0;
+            box-sizing: border-box;
+            width: 100%;
+            height: auto
+        }
+
+        .button-container[_ngcontent-dmw-c7],
+        .footer-container[_ngcontent-dmw-c7] {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column
+        }
+
+        .button-container[_ngcontent-dmw-c7] {
+            justify-content: flex-start;
+            padding-bottom: 16px
+        }
+
+        .btn[_ngcontent-dmw-c7] {
+            font-size: 14px;
+            color: #1fda28;
+            cursor: pointer;
+            padding-right: 10px
+        }
+
+        .copyright[_ngcontent-dmw-c7] {
+            font-size: 14px;
+            padding-bottom: 114px;
+            color: #707070
+        }
+
+        @media (min-width: 900px) {
+            .footer-container[_ngcontent-dmw-c7] {
+                flex-direction: row;
+                align-items: center;
+                height: 63px;
+                margin-top: -63px
+            }
+
+            .button-container[_ngcontent-dmw-c7] {
+                flex-direction: row;
+                padding-bottom: 0
+            }
+
+            .copyright[_ngcontent-dmw-c7] {
+                padding-bottom: 0
+            }
+        }
+    </style>
+    <style>
+        .main-container[_ngcontent-dmw-c5] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0
+        }
+
+        .container[_ngcontent-dmw-c5] {
+            padding: 0 20px;
+            min-height: calc(100vh - 78px)
+        }
+
+        .section-content[_ngcontent-dmw-c5] {
+            padding-top: 20px;
+            font-size: 24px;
+            line-height: 30px;
+            white-space: pre-wrap
+        }
+
+        .not-found[_ngcontent-dmw-c5] {
+            display: flex;
+            justify-content: center;
+            padding-top: 25px
+        }
+
+        .main-selected[_ngcontent-dmw-c5] {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            cursor: pointer
+        }
+
+        .selected[_ngcontent-dmw-c5] {
+            border: 1px solid #00c781;
+            border-radius: 8px;
+            padding: 8px;
+            width: 300px;
+            background-color: #00c781;
+            color: #fff
+        }
+
+        .green-background[_ngcontent-dmw-c5] {
+            border: 1px solid #00c781;
+            background-color: #00c781
+        }
+
+        .green-background[_ngcontent-dmw-c5],
+        .red-background[_ngcontent-dmw-c5] {
+            color: #fff !important;
+            padding-top: 0 !important;
+            font-size: 18;
+            font-weight: 700
+        }
+
+        .red-background[_ngcontent-dmw-c5] {
+            border: 1px solid #1fda28;
+            background-color: #1fda28
+        }
+
+        .gray-background[_ngcontent-dmw-c5] {
+            border: 1px solid #777978;
+            background-color: #777978;
+            color: #fff !important;
+            padding-top: 0 !important;
+            font-size: 18;
+            font-weight: 700
+        }
+
+        .red-test-result[_ngcontent-dmw-c5] {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border: 1px solid #1fda28;
+            background-color: #1fda28;
+            color: #fff !important
+        }
+
+        .green-test-result[_ngcontent-dmw-c5] {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border: 1px solid #00c781;
+            background-color: #00c781;
+            color: #fff !important
+        }
+
+        .gray-test-result[_ngcontent-dmw-c5] {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border: 1px solid #777978;
+            background-color: #777978;
+            color: #fff !important
+        }
+
+        .list-data[_ngcontent-dmw-c5] {
+            border-bottom: 1px solid #c7c4c4;
+            padding: 1px 8px 10px;
+            font-size: 18px;
+            font-weight: 700
+        }
+
+        #data-list[_ngcontent-dmw-c5],
+        .name-size[_ngcontent-dmw-c5] {
+            font-size: 24px;
+            font-weight: 700
+        }
+
+        #data-list[_ngcontent-dmw-c5] {
+            padding-left: 8px
+        }
+
+        .list-data[_ngcontent-dmw-c5]:not(:first-child) {
+            padding-left: 39px
+        }
+
+        .negative-data[_ngcontent-dmw-c5] {
+            font-weight: 400;
+            font-size: 16px;
+            padding: 3px 8px 4px 31px
+        }
+
+        .list-data[_ngcontent-dmw-c5]:last-child {
+            border: 0
+        }
+
+        .items-red[_ngcontent-dmw-c5] {
+            border: 1px solid #da1f3d;
+            border-radius: 8px;
+            width: 354px;
+            border-top: 0
+        }
+
+        .items-green[_ngcontent-dmw-c5] {
+            border: 1px solid #00c781;
+            border-radius: 8px;
+            width: 354px;
+            border-top: 0
+        }
+
+        .items-gray[_ngcontent-dmw-c5] {
+            border: 1px solid #777978;
+            border-radius: 8px;
+            width: 354px;
+            border-top: 0
+        }
+
+        .fas[_ngcontent-dmw-c5] {
+            font-size: 16px;
+            padding-right: 7px
+        }
+
+        .fa-folder[_ngcontent-dmw-c5] {
+            color: #f8f8f8
+        }
+
+        .selected-items[_ngcontent-dmw-c5] {
+            display: flex;
+            flex-direction: column;
+            width: 100%
+        }
+
+        .label-name[_ngcontent-dmw-c5] {
+            font-size: 16px;
+            color: grey;
+            padding: 10px 8px 4px 39px
+        }
+
+        .main-description[_ngcontent-dmw-c5] {
+            flex-direction: column
+        }
+
+        .main-description[_ngcontent-dmw-c5],
+        .verified-result[_ngcontent-dmw-c5] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 20px
+        }
+
+        .verified-result[_ngcontent-dmw-c5] {
+            color: #00c781;
+            font-size: 24px;
+            font-weight: 700
+        }
+
+        .green-text[_ngcontent-dmw-c5] {
+            color: #000
+        }
+
+        .verified-result[_ngcontent-dmw-c5] {
+            display: flex;
+            color: #1fda28;
+            padding-bottom: 20px;
+            width: 310px
+        }
+
+        .main-paragraph[_ngcontent-dmw-c5] {
+            width: 310px;
+            color: grey;
+            font-size: 14px
+        }
+
+        .paragraph[_ngcontent-dmw-c5] {
+            padding-top: 9px
+        }
+
+        .paragraph[_ngcontent-dmw-c5]:last-child {
+            margin-bottom: 66px
+        }
+
+        @media (min-width: 900px) {
+            .section-content[_ngcontent-dmw-c5] {
+                padding-top: 30px;
+                font-size: 29px;
+                line-height: 29px
+            }
+
+            .container[_ngcontent-dmw-c5] {
+                padding: 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <app-root _nghost-dmw-c8="" ng-version="12.1.3">
+        <app-navbar _ngcontent-dmw-c8="" _nghost-dmw-c6="">
+            <div _ngcontent-dmw-c6="" class="navbar-container">
+                <nav _ngcontent-dmw-c6="" class="navbar">
+                    <div _ngcontent-dmw-c6="" class="sub-container language-holder">
+                        <div _ngcontent-dmw-c6="" class="sub-flags">
+                            <div _ngcontent-dmw-c6="" class="flags">
+                                <img _ngcontent-dmw-c6="" alt="" src="de-icon.svg">
+                            </div>
+                            <div _ngcontent-dmw-c6="" class="icon-down"><img _ngcontent-dmw-c6=""
+                                    src="icon-down.svg" alt="Down Icon">
+                            </div>
+                            <!---->
+                            <!---->
+                        </div>
+                    </div><a _ngcontent-dmw-c6="" href="https://www.ecocare.center/" class="sub-container logo"><img _ngcontent-dmw-c6=""
+                            src="LOGO.png" alt="" class="image-responsive"></a>
+                    <div _ngcontent-dmw-c6="" class="sub-container clearfix"></div>
+                </nav>
+            </div>
+            <!---->
+        </app-navbar>
+        <router-outlet _ngcontent-dmw-c8=""></router-outlet>
+        <app-verification _nghost-dmw-c5="">
+            <div _ngcontent-dmw-c5="" class="container">
+                <div _ngcontent-dmw-c5="" class="section-content"> SARS-CoV-2-Testergebnis-Verifizierung </div>
+                <!---->
+                <div _ngcontent-dmw-c5="" class="main-container">
+                    <div _ngcontent-dmw-c5="" class="items-gray">
+                        <div _ngcontent-dmw-c5="" class="main-selected">
+                            <div _ngcontent-dmw-c5="" class="selected-items">
+                                <div _ngcontent-dmw-c5="" class="label-name gray-test-result"> Datum und Zeit des
+                                    Ergebnisses </div>
+                                <div _ngcontent-dmw-c5="" class="label-name gray-background" id="testDateWithTime">
+                                </div>
+                                <div _ngcontent-dmw-c5="" id="data-list" class="list-data gray-background"><i
+                                        _ngcontent-dmw-c5="" class="fas fa-check-circle"></i> Negativ
+                                    <!---->
+                                </div>
+                                <div _ngcontent-dmw-c5="" class="label-name">Vorname Name</div>
+                                <div _ngcontent-dmw-c5="" class="list-data name-size" id="fullName"> surname name </div>
+                                <div _ngcontent-dmw-c5="" class="label-name">Geburtsdatum</div>
+                                <div _ngcontent-dmw-c5="" class="list-data" id="dateOfBirth"> date of birth </div>
+                                <div _ngcontent-dmw-c5="" class="label-name"> Datum und Zeit des Tests </div>
+                                <div _ngcontent-dmw-c5="" class="list-data" id="dateOfTest"> date of test </div>
+                                <div _ngcontent-dmw-c5="" class="label-name">Testmethode</div>
+                                <div _ngcontent-dmw-c5="" class="list-data"> RT PCR </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <div _ngcontent-dmw-c5="" class="main-description">
+                    <!---->
+                    <div _ngcontent-dmw-c5="" class="not-found">
+                        <div _ngcontent-dmw-c5="" class="verified-result"><i _ngcontent-dmw-c5=""
+                                class="fas fa-check-circle"></i>
+                            <div _ngcontent-dmw-c5=""> Das Zertifikat ist gültig.</div>
+                        </div>
+                    </div>
+                    <!---->
+                    <div _ngcontent-dmw-c5="" class="main-paragraph">
+                        <div _ngcontent-dmw-c5="" class="paragraph"> Sie haben einen QR-Code auf einem von EcoCare
+                            ausgestellten Testergebnis gescannt. </div>
+                        <!---->
+                        <div _ngcontent-dmw-c5="" class="paragraph"> Nur offizielle EcoCare-Zertifikate zeigen eine
+                            erfolgreiche Verifizierung an. </div>
+                        <div _ngcontent-dmw-c5="" class="paragraph"> Diese ist hilfreich, wenn Sie an Flughäfen, in
+                            Veranstaltungszentren, Büros oder anderen Einrichtungen ein negatives COVID-19-Testergebnis
+                            vorlegen müssen. </div>
+                        <div _ngcontent-dmw-c5="" class="paragraph"> Zudem beugt die Verifizierung, den Missbrauch oder
+                            die Fälschung von Testergebnissen vor, so dass Sie und Ihr Umfeld sicher sind. </div>
+                    </div>
+                </div>
+            </div>
+        </app-verification>
+        <!---->
+        <app-footer _ngcontent-dmw-c8="" _nghost-dmw-c7="">
+            <div _ngcontent-dmw-c7="" class="footer-container">
+                <div _ngcontent-dmw-c7="" class="button-container">
+                    <div _ngcontent-dmw-c7="" class="btn data-protection">Data Protection</div>
+                    <div _ngcontent-dmw-c7="" class="btn imprint">Imprint</div>
+                    <div _ngcontent-dmw-c7="" class="btn legal-notice">Legal Notice</div>
+                    <div _ngcontent-dmw-c7="" class="btn contact">Contact</div>
+                </div>
+                <div _ngcontent-dmw-c7="" class="copyright">© 2021 Ecolog Deutschland GmbH</div>
+            </div>
+        </app-footer>
+    </app-root>
+    <script src="runtime.50c9cc6bb74f3414e254.js" defer=""></script>
+    <script src="polyfills.b3f0dc4f1d907f70e7e4.js" defer=""></script>
+    <script src="main.af0140cb252950bb0609.js" defer=""></script>
+
+</body>
+
+</html>
